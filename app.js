@@ -11,6 +11,7 @@ const cartItemsContainer = document.getElementById('cartItems');
 const cartTotalElement = document.getElementById('cartTotal');
 const btnCheckout = document.getElementById('btnCheckout');
 const emptyCartMessage = document.getElementById('emptyCartMessage');
+const searchInput = document.getElementById('searchInput');
 
 // Modal Elements
 const modalProductTitle = document.getElementById('modalProductTitle');
@@ -31,6 +32,15 @@ const checkoutForm = document.getElementById('checkoutForm');
 document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
     updateCartUI();
+
+    // Evento Búsqueda Dinámica
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filteredProducts = products.filter(p => p.title.toLowerCase().includes(term));
+            renderProducts(filteredProducts);
+        });
+    }
 
     // Eventos Modal Cantidad
     btnMinusModal.addEventListener('click', () => {
@@ -84,9 +94,15 @@ async function fetchProducts() {
 }
 
 // Renderizar Productos
-function renderProducts() {
+function renderProducts(itemsToRender = products) {
     productGrid.innerHTML = '';
-    products.forEach(product => {
+    
+    if (itemsToRender.length === 0) {
+        productGrid.innerHTML = `<div class="col-12 text-center text-muted my-5"><i class="fas fa-search fs-1 mb-3 text-secondary"></i><h5>No se encontraron productos.</h5></div>`;
+        return;
+    }
+
+    itemsToRender.forEach(product => {
         const col = document.createElement('div');
         col.className = 'col-sm-6 col-md-4 col-lg-3';
         col.innerHTML = `
