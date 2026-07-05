@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopMaster - E-Commerce SPA</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-shopping-cart me-2"></i>ShopMaster
+            </a>
+            <button class="btn btn-outline-light position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+                <i class="fas fa-shopping-cart"></i> Mi Carrito
+                <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-light text-center py-5 mb-4 shadow-sm">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-dark">Bienvenido a ShopMaster</h1>
+            <p class="lead text-secondary">Descubre nuestros productos con la mejor calidad y precio.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div id="loading" class="text-center my-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <p class="mt-2 text-secondary">Cargando productos...</p>
+        </div>
+        <div id="productGrid" class="row g-4">
+            <!-- Productos se inyectarán aquí dinámicamente -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-5 footer-custom bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Foto y Bio -->
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="FOTO_PORTADA_JUANCITO.png" alt="Ing. Juancito Peña" class="rounded-circle profile-img mb-3 shadow" data-bs-toggle="modal" data-bs-target="#profileModal" style="cursor: pointer;">
+                    <h5 class="fw-bold mb-1 text-primary">Ing. Juancito Peña</h5>
+                    <p class="text-light small">Docente universitario y desarrollador web. Apasionado por la IA, el análisis de datos y el diseño de sistemas educativos.</p>
+                </div>
+                <!-- Skills -->
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <h5 class="fw-bold text-success mb-3">Tecnologías y Skills</h5>
+                    <div class="skills-container d-flex flex-wrap justify-content-center gap-2">
+                        <span class="badge bg-secondary"><i class="fas fa-database"></i> SQL</span>
+                        <span class="badge bg-warning text-dark"><i class="fas fa-chart-bar"></i> Power BI</span>
+                        <span class="badge bg-info text-dark"><i class="fab fa-python"></i> Python</span>
+                        <span class="badge bg-primary"><i class="fas fa-mobile-alt"></i> .NET MAUI</span>
+                        <span class="badge bg-danger"><i class="fab fa-html5"></i> HTML/CSS</span>
+                        <span class="badge bg-warning text-dark"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="badge bg-info text-dark"><i class="fab fa-react"></i> React</span>
+                        <span class="badge bg-primary"><i class="fab fa-php"></i> PHP/Laravel</span>
+                        <span class="badge bg-success"><i class="fas fa-file-excel"></i> Excel</span>
+                        <span class="badge bg-dark border"><i class="fas fa-robot"></i> IA (Gemini, Claude, etc.)</span>
+                    </div>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="col-md-4 text-center">
+                    <h5 class="fw-bold text-primary mb-3">Conecta conmigo</h5>
+                    <div class="social-icons fs-3 d-flex justify-content-center gap-3">
+                        <a href="#" class="text-white hover-social"><i class="fab fa-youtube text-danger"></i></a>
+                        <a href="#" class="text-white hover-social"><i class="fab fa-linkedin text-primary"></i></a>
+                        <a href="#" class="text-white hover-social"><i class="fab fa-github text-secondary"></i></a>
+                        <a href="#" class="text-white hover-social"><i class="fab fa-whatsapp text-success"></i></a>
+                        <a href="#" class="text-white hover-social"><i class="fab fa-instagram text-danger"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4">
+            <div class="text-center">
+                <p class="mb-0 fw-bold signature">Creado por Ing. Juancito Peña</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Perfil -->
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-primary fw-bold" id="profileModalLabel">Perfil Profesional</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="FOTO_PORTADA_JUANCITO.png" alt="Ing. Juancito Peña" class="rounded-circle mb-3 border border-3 border-primary shadow" width="150" height="150" style="object-fit: cover;">
+                    <h4 class="fw-bold text-primary">Ing. Juancito Peña</h4>
+                    <h6 class="text-success mb-3">Docente Universitario & Full-Stack Developer</h6>
+                    <p class="small text-light">Apasionado por la Inteligencia Artificial, análisis de datos y la creación de soluciones tecnológicas y educativas innovadoras.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="productModalLabel">Detalles del Producto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-center mb-3 mb-md-0">
+                            <img id="modalProductImage" src="" alt="Producto" class="img-fluid rounded shadow-sm" style="max-height: 300px; object-fit: contain;">
+                        </div>
+                        <div class="col-md-6">
+                            <span id="modalProductCategory" class="badge bg-secondary mb-2 text-uppercase"></span>
+                            <h4 id="modalProductTitle" class="fw-bold text-dark mb-3"></h4>
+                            <p id="modalProductDescription" class="text-muted small"></p>
+                            <h3 class="text-success fw-bold mb-4">$<span id="modalProductPrice"></span></h3>
+                            
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="input-group" style="width: 130px;">
+                                    <button class="btn btn-outline-secondary" type="button" id="btnMinusModal">-</button>
+                                    <input type="number" id="modalQuantity" class="form-control text-center" value="1" min="1">
+                                    <button class="btn btn-outline-secondary" type="button" id="btnPlusModal">+</button>
+                                </div>
+                                <button id="btnAddToCartModal" class="btn btn-primary flex-grow-1 fw-bold">
+                                    <i class="fas fa-cart-plus me-2"></i>Agregar 🛒
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header bg-primary text-white">
+            <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel"><i class="fas fa-shopping-cart me-2"></i>Carrito de Compras</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div id="cartItems" class="flex-grow-1 overflow-auto mb-3">
+                <!-- Items del carrito -->
+                <div class="text-center text-muted mt-5" id="emptyCartMessage">
+                    <i class="fas fa-box-open fs-1 mb-3"></i>
+                    <p>Tu carrito está vacío.</p>
+                </div>
+            </div>
+            <div class="border-top pt-3">
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="fw-bold fs-5">Total:</span>
+                    <span class="fw-bold fs-5 text-success">$<span id="cartTotal">0.00</span></span>
+                </div>
+                <button class="btn btn-success w-100 fw-bold py-2" id="btnCheckout" data-bs-toggle="modal" data-bs-target="#checkoutModal" disabled>
+                    <i class="fas fa-credit-card me-2"></i>Ir a Pagar 💳
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title fw-bold" id="checkoutModalLabel"><i class="fas fa-lock me-2"></i>Pago Seguro</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="checkoutForm">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Nombre Completo</label>
+                            <input type="text" class="form-control" id="ccName" required placeholder="Ej. Juan Pérez">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Número de Tarjeta</label>
+                            <input type="text" class="form-control" id="ccNumber" required placeholder="0000 0000 0000 0000" maxlength="19">
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label class="form-label fw-bold">Vencimiento</label>
+                                <input type="text" class="form-control" id="ccExpiry" required placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label class="form-label fw-bold">CVC</label>
+                                <input type="text" class="form-control" id="ccCVC" required placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 fw-bold py-2 mt-3">
+                            Confirmar y Pagar ✅
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alerta Flotante (Toast) -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+        <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-bold">
+                    <i class="fas fa-check-circle me-2"></i><span id="toastMessage">Acción exitosa</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
