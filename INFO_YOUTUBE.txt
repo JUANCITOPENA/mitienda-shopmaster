@@ -1,0 +1,29 @@
+TÍTULO DEL VIDEO (94 caracteres):
+🔥 GEMINI 3.1 PRO A PRUEBA: ¡CREA TU E-COMMERCE DESDE CERO CON IA Y ANTIGRAVITY CLI! 🛒🤖
+
+-----------------------------------------------------------------------------------------
+DESCRIPCIÓN:
+
+¿Es posible crear una tienda virtual completa con un solo prompt? 🤯 En este video ponemos a prueba el poderoso modelo Gemini 3.1 Pro en tres entornos distintos: la versión web Gemini.com, Google AI Studio para desarrolladores, y el innovador entorno de programación autónomo Antigravity CLI. 
+
+El reto: Desarrollar en tiempo récord una Single Page Application (SPA) de E-commerce moderna que consuma la FakeStoreAPI. Implementamos funciones avanzadas como búsqueda dinámica, un carrito de compras funcional, simulación de pasarela de pagos y, la joya de la corona: ¡Generación automática de un ticket de compra térmico en PDF! 🧾✨
+
+Descubre en esta prueba de estrés cómo la Inteligencia Artificial está cambiando las reglas del juego, no reemplazando al programador, sino abriendo las puertas del comercio digital para miles de emprendedores. 🚀
+
+-----------------------------------------------------------------------------------------
+LLAMADOS A LA ACCIÓN Y ENLACES:
+
+👍 ¡Si te sorprendió el poder de Gemini 3.1 Pro, no olvides DEJAR TU LIKE, SUSCRIBIRTE y activar la campanita para más pruebas extremas con Inteligencia Artificial! 🔔
+
+👇 RECURSOS DEL VIDEO 👇
+
+📂 Repositorio Oficial (¡Descarga el código y el PROMPT Maestro aquí!):
+🔗 https://github.com/JUANCITOPENA/mitienda-shopmaster
+
+🌐 Prueba el proyecto funcionando en vivo (GitHub Pages):
+🔗 https://juancitopena.github.io/mitienda-shopmaster/
+
+-----------------------------------------------------------------------------------------
+HASHTAGS:
+
+#GeminiPro #AntigravityCLI #InteligenciaArtificial #DesarrolloWeb #Programacion #Ecommerce #JavaScript #GoogleAI #HTML #CSS #EmprendimientoDigital
