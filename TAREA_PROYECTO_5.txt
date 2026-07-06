@@ -1,0 +1,35 @@
+5– TAREA: PROYECTO # 5 – E-COMMERCE SPA CON FAKESTOREAPI
+
+Fecha de entrega: domingo 12/07/2026 ⏰
+
+📌 Resumen:
+
+Crear un SPA de e-commerce moderno y funcional con Gemini 3.1 Pro + Google AI Studio + Antigravity CLI.
+
+Usar HTML5, CSS3, Bootstrap 5.3 y JavaScript ES6+ (Asíncrono).
+
+Consumo de API pública (FakeStoreAPI) para renderizado dinámico de productos.
+
+Navbar con buscador dinámico en tiempo real integrado.
+
+Tarjetas de productos con hover effects, modal de detalles y carrito de compras inteligente y persistente (LocalStorage).
+
+Modal con pasarela de pago simulada.
+
+Generación de Tickets Térmicos de Compra en formato PDF (fuente monoespaciada) usando jsPDF.
+
+Footer interactivo profesional con foto de perfil, links de redes y diseño UI/UX premium.
+
+📂 Entrega:
+
+Subir repo a GitHub 👉 mitienda-shopmaster
+
+Publicar en GitHub Pages y desplegar en Vercel 🚀
+🔗 Repositorio: https://github.com/JUANCITOPENA/mitienda-shopmaster
+🌐 Live Demo: https://juancitopena.github.io/mitienda-shopmaster/
+
+PDF con presentación personal, explicación breve, pasos seguidos, URLs y capturas 📸✨
+
+🛠️ Tecnologías: HTML5 • CSS3 • Bootstrap 5 • Vanilla JS • jsPDF • FontAwesome
+
+🎥 Video del Proyecto: https://www.youtube.com/watch?v=Q-UQ0PhWzgU

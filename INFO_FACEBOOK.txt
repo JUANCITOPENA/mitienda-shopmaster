@@ -1,0 +1,20 @@
+🔥 ¡Familia y amigos, miren lo que acabo de crear usando Inteligencia Artificial! 🤯🤖
+
+Me puse el reto de construir una TIENDA VIRTUAL COMPLETA desde cero, y para ello puse a prueba la nueva IA de Google (Gemini 3.1 Pro) junto con Antigravity CLI. ¡El resultado es increíble! 🛒✨
+
+En tiempo récord armamos "ShopMaster", una página súper rápida donde puedes ver productos reales, buscar lo que necesitas al instante, agregar al carrito, simular el pago y... ¡hasta te genera una factura digital en PDF igualita a los tickets de supermercado! 🧾💳
+
+La IA está cambiando el juego por completo, ayudando a que cualquier emprendedor pueda tener su propio negocio en internet más fácil que nunca. 🚀
+
+👉 ¡Entren a probar la tienda ustedes mismos y díganme qué les parece en los comentarios! 
+🌐 Tienda en vivo: https://juancitopena.github.io/mitienda-shopmaster/
+
+Si son curiosos, programadores, o quieren ver las instrucciones (el "Prompt") que le di a la IA, aquí les dejo mi repositorio con todo el código:
+🔗 https://github.com/JUANCITOPENA/mitienda-shopmaster
+
+🎥 Y si quieren ver cómo fue todo el proceso paso a paso, chequen mi último video en YouTube:
+▶️ https://www.youtube.com/watch?v=Q-UQ0PhWzgU
+
+¡Déjenme un like 👍 y compartan si creen que la tecnología está avanzando a pasos de gigante! 🏃‍♂️💨
+
+#Tecnologia #InteligenciaArtificial #GeminiPro #EmprendimientoDigital #DesarrolloWeb #Innovacion #Programacion
